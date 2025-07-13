@@ -1,9 +1,13 @@
 import { config } from '@fisch0920/config/eslint'
+import { nextPlugin } from "@next/eslint-plugin-next"
 
 export default [
   ...config,
   {
     files: ['**/*.ts', '**/*.tsx'],
+     plugins: {
+      "@next/next": nextPlugin,
+    },
     rules: {
       'react/prop-types': 'off',
       'unicorn/no-array-reduce': 'off',
@@ -16,7 +20,8 @@ export default [
       'jsx-a11y/media-has-caption': 'off',
       'jsx-a11y/interactive-supports-focus': 'off',
       'jsx-a11y/anchor-is-valid': 'off',
-      '@typescript-eslint/naming-convention': 'off'
-    }
+      '@typescript-eslint/naming-convention': 'off',
+      'nextPlugin.configs.recommended.rules': 'off'
   }
+}
 ]

@@ -1,0 +1,5 @@
+ignoredBuiltDependencies:
+  - '@fisch0920/config'
+  - canvas
+  - core-js
+  - sharp

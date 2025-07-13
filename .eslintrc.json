@@ -1,6 +1,11 @@
 {
   "root": true,
-  "extends": ["@fisch0920/eslint-config"],
+  "extends": [
+    "@fisch0920/eslint-config",
+    "next/core-web-vitals",
+    "plugin:@next/next/recommended"
+  ],
+  "plugins": ["@next/next"],
   "rules": {
     "react/prop-types": "off",
     "unicorn/no-array-reduce": "off",
@@ -14,11 +19,4 @@
     "jsx-a11y/anchor-is-valid": "off",
     "@typescript-eslint/naming-convention": "off"
   }
-},
-{
-  "plugins": ["@next/next"],
-  "extends": [
-    "next/core-web-vitals", // Configuração recomendada do Next.js
-    "plugin:@next/next/recommended" // Regras específicas do Next.js
-  ]
 }

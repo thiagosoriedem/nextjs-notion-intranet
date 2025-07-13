@@ -1,7 +1,9 @@
-import NextAuth from "next-auth"
-import CredentialsProvider from "next-auth/providers/credentials"
+import NextAuth from "next-auth";
+import CredentialsProvider from "next-auth/providers/credentials";
 
 export default NextAuth({
+  secret: process.env.NEXTAUTH_SECRET, // Adição essencial para produção
+  
   providers: [
     CredentialsProvider({
       name: "Credentials",
@@ -10,19 +12,23 @@ export default NextAuth({
         password: { label: "Senha", type: "password" }
       },
       async authorize(credentials) {
-        // Exemplo: usuário fixo (substitua por sua lógica de autenticação)
+        // Credenciais fixas (apenas para desenvolvimento)
         if (
           credentials?.email === "admin@sosotorrino.com" &&
           credentials?.password === "123456"
         ) {
-          return { id: "1", name: "Admin", email: credentials.email }
+          return { 
+            id: "1", 
+            name: "Admin", 
+            email: credentials.email 
+          };
         }
-        // Se não encontrar, retorna null
-        return null
+        return null;
       }
     })
   ],
+  
   pages: {
-    signIn: "/login"
+    signIn: "/login" // Página de login personalizada
   }
-})
+});

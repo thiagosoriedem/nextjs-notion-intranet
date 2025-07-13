@@ -45,6 +45,7 @@
     "notion-client": "^7.4.2",
     "notion-types": "^7.4.2",
     "notion-utils": "^7.4.2",
+    "openssl": "^2.0.0",
     "p-map": "^7.0.3",
     "p-memoize": "^7.1.1",
     "posthog-js": "^1.257.0",

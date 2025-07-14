@@ -8,6 +8,6 @@
       "@/styles/*": ["styles/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "*.config.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "*.config.ts", "pages/login"],
   "exclude": ["node_modules"]
 }

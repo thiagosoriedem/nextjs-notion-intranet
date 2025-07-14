@@ -53,12 +53,12 @@ export default siteConfig({
    navigationStyle: 'custom',
    navigationLinks: [
      {
-       title: 'Autorizações',
-       pageId: '22f03c9c7c66803ea828f592513e589b'
+       title: 'Convênios',
+       pageId: '075148a4ba284c01a47d443b82a796f2'
      },
      {
-       title: 'Contact',
-       pageId: '6a29ebcb935a4f0689fe661ab5f3b8d1'
+       title: 'Conta',
+       pageId: ''
      }
    ]
 })

@@ -1,10 +1,10 @@
-.container {
+ .container {
   max-width: 400px;
-  margin: 80px auto;
+  margin: 150px auto;
   padding: 32px;
   border: 1px solid #eee;
   border-radius: 16px;
-  background: #fff;
+  background: #ffffff;
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
   text-align: center;
 }
@@ -47,3 +47,47 @@
   border: none;
   cursor: pointer;
 }
+
+Adicione outros estilos para o tema escuro conforme necessári
+
+.container .dark {
+  color: #383838;
+}
+
+body .dark {
+  background-color: #242424;
+  color: #e0e0e0;
+}
+
+/* Estilos para inputs no modo escuro */
+.dark .input {
+  background-color: #333;
+  color: #fff;
+  border-color: #444;
+}
+
+.dark .title{
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #ff0101;
+  font-family: Helvetica;
+}
+
+/* Estilos para botão no modo escuro */
+.themeToggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.toggleButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Adicione outros estilos conforme necessário */

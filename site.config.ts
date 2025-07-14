@@ -55,10 +55,6 @@ export default siteConfig({
      {
        title: 'Convênios',
        pageId: '075148a4ba284c01a47d443b82a796f2'
-     },
-     {
-       title: 'Conta',
-       pageId: ''
      }
    ]
 })

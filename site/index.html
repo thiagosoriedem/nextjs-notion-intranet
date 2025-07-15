@@ -5,11 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intranet SOS Otorrino</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E30613', // Vermelho corporativo
+                        secondary: '#333333', // Cinza escuro
+                        accent: '#E30613', // Vermelho para destaques
+                    }
+                }
+            }
+        }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f0f4f8;
+            background-color: #f5f5f5;
         }
         .news-scroll {
             height: 400px;
@@ -30,36 +43,36 @@
         }
     </style>
 </head>
-<body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-100">
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
     <div class="container mx-auto px-4">
         <div class="flex flex-col md:flex-row gap-8 items-center justify-center">
             <!-- Login Section -->
             <div class="login-container w-full md:w-1/3 p-8 rounded-xl">
                 <div class="flex flex-col items-center mb-8">
                     <svg class="w-32 h-32 mb-4" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="100" cy="100" r="80" fill="#1a56db"/>
+                        <circle cx="100" cy="100" r="80" fill="#E30613"/>
                         <text x="100" y="125" font-family="Arial" font-size="60" font-weight="bold" text-anchor="middle" fill="white">SOS</text>
                     </svg>
-                    <h1 class="text-2xl font-bold text-gray-800">SOS Otorrino</h1>
+                    <h1 class="text-2xl font-bold text-secondary">SOS Otorrino</h1>
                     <p class="text-gray-600 text-sm">Portal da Intranet</p>
                 </div>
                 
                 <form id="loginForm" class="space-y-6">
                     <div>
-                        <label for="username" class="block text-sm font-medium text-gray-700 mb-1">Nome de usuário</label>
+                        <label for="username" class="block text-sm font-medium text-secondary mb-1">Nome de usuário</label>
                         <div class="relative">
-                            <input type="text" id="username" name="username" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" placeholder="nome.sobrenome" required>
+                            <input type="text" id="username" name="username" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary" placeholder="nome.sobrenome" required>
                             <span class="absolute right-3 top-2 text-gray-400">@sosotorrino.com.br</span>
                         </div>
                     </div>
                     
                     <div>
-                        <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Senha</label>
-                        <input type="password" id="password" name="password" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required>
+                        <label for="password" class="block text-sm font-medium text-secondary mb-1">Senha</label>
+                        <input type="password" id="password" name="password" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary" required>
                     </div>
                     
                     <div>
-                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-300 ease-in-out">
+                        <button type="submit" class="w-full bg-primary hover:bg-red-700 text-white font-medium py-2 px-4 rounded-md transition duration-300 ease-in-out">
                             Entrar
                         </button>
                     </div>
@@ -70,37 +83,37 @@
             
             <!-- News Section -->
             <div class="w-full md:w-1/2 bg-white rounded-xl shadow-lg overflow-hidden">
-                <div class="bg-blue-600 text-white py-3 px-6">
+                <div class="bg-primary text-white py-3 px-6">
                     <h2 class="text-lg font-semibold">Atualizações e Notícias</h2>
                 </div>
                 <div class="news-scroll p-6">
                     <div class="news-item space-y-6">
-                        <div class="border-l-4 border-blue-500 pl-4">
-                            <h3 class="font-medium text-lg text-gray-800">Novo Protocolo de Atendimento</h3>
+                        <div class="border-l-4 border-primary pl-4">
+                            <h3 class="font-medium text-lg text-secondary">Novo Protocolo de Atendimento</h3>
                             <p class="text-gray-600 text-sm">A partir de 15/06, todos os atendimentos seguirão o novo protocolo disponível na seção de Procedimentos.</p>
                             <p class="text-gray-400 text-xs mt-2">10/06/2023</p>
                         </div>
                         
                         <div class="border-l-4 border-green-500 pl-4">
-                            <h3 class="font-medium text-lg text-gray-800">Treinamento de Biossegurança</h3>
+                            <h3 class="font-medium text-lg text-secondary">Treinamento de Biossegurança</h3>
                             <p class="text-gray-600 text-sm">Treinamento obrigatório para todos os funcionários será realizado no dia 20/06 às 14h no auditório.</p>
                             <p class="text-gray-400 text-xs mt-2">08/06/2023</p>
                         </div>
                         
                         <div class="border-l-4 border-yellow-500 pl-4">
-                            <h3 class="font-medium text-lg text-gray-800">Novos Convênios</h3>
+                            <h3 class="font-medium text-lg text-secondary">Novos Convênios</h3>
                             <p class="text-gray-600 text-sm">Firmamos parceria com mais 3 convênios. Consulte a lista atualizada na seção Tipos de Convênios.</p>
                             <p class="text-gray-400 text-xs mt-2">05/06/2023</p>
                         </div>
                         
                         <div class="border-l-4 border-purple-500 pl-4">
-                            <h3 class="font-medium text-lg text-gray-800">Manutenção do Sistema</h3>
+                            <h3 class="font-medium text-lg text-secondary">Manutenção do Sistema</h3>
                             <p class="text-gray-600 text-sm">No próximo domingo (18/06), o sistema ficará indisponível das 00h às 04h para manutenção programada.</p>
                             <p class="text-gray-400 text-xs mt-2">02/06/2023</p>
                         </div>
                         
                         <div class="border-l-4 border-red-500 pl-4">
-                            <h3 class="font-medium text-lg text-gray-800">Campanha de Vacinação</h3>
+                            <h3 class="font-medium text-lg text-secondary">Campanha de Vacinação</h3>
                             <p class="text-gray-600 text-sm">Todos os funcionários devem apresentar carteira de vacinação atualizada até 30/06.</p>
                             <p class="text-gray-400 text-xs mt-2">01/06/2023</p>
                         </div>
@@ -117,37 +130,37 @@
                 <div class="flex items-center justify-between">
                     <div class="flex items-center">
                         <svg class="w-10 h-10 mr-3" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="100" cy="100" r="80" fill="#1a56db"/>
+                            <circle cx="100" cy="100" r="80" fill="#E30613"/>
                             <text x="100" y="125" font-family="Arial" font-size="60" font-weight="bold" text-anchor="middle" fill="white">SOS</text>
                         </svg>
-                        <h1 class="text-xl font-bold text-gray-800">SOS Otorrino</h1>
+                        <h1 class="text-xl font-bold text-secondary">SOS Otorrino</h1>
                     </div>
                     
                     <div class="relative" id="userProfileMenu">
                         <div class="flex items-center cursor-pointer" id="profileDropdownButton">
-                            <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-medium mr-2">
+                            <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-medium mr-2">
                                 AD
                             </div>
-                            <span class="text-gray-700 mr-1">Admin</span>
+                            <span class="text-secondary mr-1">Admin</span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                             </svg>
                         </div>
                         
                         <div class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 hidden" id="profileDropdown">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Meu Perfil</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Configurações</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" id="logoutButton">Sair</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-secondary hover:bg-gray-100">Meu Perfil</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-secondary hover:bg-gray-100">Configurações</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-secondary hover:bg-gray-100" id="logoutButton">Sair</a>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
         
-        <nav class="bg-gray-800 text-white">
+        <nav class="bg-secondary text-white">
             <div class="container mx-auto px-4">
                 <div class="flex items-center space-x-4 overflow-x-auto py-3">
-                    <a href="#" class="px-3 py-2 rounded-md text-sm font-medium bg-blue-600" data-section="inicial">Inicial</a>
+                    <a href="#" class="px-3 py-2 rounded-md text-sm font-medium bg-primary" data-section="inicial">Inicial</a>
                     <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700" data-section="ferramentas">Ferramentas</a>
                     <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700" data-section="atualizacoes">Atualizações</a>
                     <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700" data-section="chat">Chat</a>
@@ -164,20 +177,20 @@
         <main class="container mx-auto px-4 py-6">
             <!-- Inicial Section -->
             <section id="inicial" class="section-content">
-                <h2 class="text-2xl font-bold mb-6">Bem-vindo à Intranet SOS Otorrino</h2>
+                <h2 class="text-2xl font-bold mb-6 text-secondary">Bem-vindo à Intranet SOS Otorrino</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div class="bg-white rounded-lg shadow-md p-6">
-                        <h3 class="text-lg font-semibold mb-3">Avisos Importantes</h3>
+                        <h3 class="text-lg font-semibold mb-3 text-secondary">Avisos Importantes</h3>
                         <ul class="space-y-3">
                             <li class="flex items-start">
-                                <span class="bg-red-100 text-red-600 p-1 rounded mr-2">
+                                <span class="bg-red-100 text-primary p-1 rounded mr-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                                     </svg>
                                 </span>
                                 <div>
-                                    <p class="text-gray-800">Manutenção do sistema no domingo (18/06)</p>
+                                    <p class="text-secondary">Manutenção do sistema no domingo (18/06)</p>
                                     <p class="text-sm text-gray-500">Sistema indisponível das 00h às 04h</p>
                                 </div>
                             </li>
@@ -188,7 +201,7 @@
                                     </svg>
                                 </span>
                                 <div>
-                                    <p class="text-gray-800">Treinamento obrigatório</p>
+                                    <p class="text-secondary">Treinamento obrigatório</p>
                                     <p class="text-sm text-gray-500">20/06 às 14h no auditório</p>
                                 </div>
                             </li>
@@ -196,38 +209,38 @@
                     </div>
                     
                     <div class="bg-white rounded-lg shadow-md p-6">
-                        <h3 class="text-lg font-semibold mb-3">Aniversariantes do Mês</h3>
+                        <h3 class="text-lg font-semibold mb-3 text-secondary">Aniversariantes do Mês</h3>
                         <ul class="space-y-3">
                             <li class="flex items-center">
-                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-3">
+                                <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-primary mr-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                                     </svg>
                                 </div>
                                 <div>
-                                    <p class="text-gray-800">Ana Oliveira</p>
+                                    <p class="text-secondary">Ana Oliveira</p>
                                     <p class="text-sm text-gray-500">15/06</p>
                                 </div>
                             </li>
                             <li class="flex items-center">
-                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-3">
+                                <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-primary mr-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                                     </svg>
                                 </div>
                                 <div>
-                                    <p class="text-gray-800">Carlos Santos</p>
+                                    <p class="text-secondary">Carlos Santos</p>
                                     <p class="text-sm text-gray-500">22/06</p>
                                 </div>
                             </li>
                             <li class="flex items-center">
-                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-3">
+                                <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-primary mr-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                                     </svg>
                                 </div>
                                 <div>
-                                    <p class="text-gray-800">Mariana Costa</p>
+                                    <p class="text-secondary">Mariana Costa</p>
                                     <p class="text-sm text-gray-500">28/06</p>
                                 </div>
                             </li>
@@ -235,26 +248,26 @@
                     </div>
                     
                     <div class="bg-white rounded-lg shadow-md p-6">
-                        <h3 class="text-lg font-semibold mb-3">Escala de Plantão - Hoje</h3>
+                        <h3 class="text-lg font-semibold mb-3 text-secondary">Escala de Plantão - Hoje</h3>
                         <ul class="space-y-3">
                             <li class="flex items-center">
                                 <span class="w-2 h-2 rounded-full bg-green-500 mr-2"></span>
                                 <div>
-                                    <p class="text-gray-800">Dr. Roberto Mendes</p>
+                                    <p class="text-secondary">Dr. Roberto Mendes</p>
                                     <p class="text-sm text-gray-500">08:00 - 14:00</p>
                                 </div>
                             </li>
                             <li class="flex items-center">
                                 <span class="w-2 h-2 rounded-full bg-green-500 mr-2"></span>
                                 <div>
-                                    <p class="text-gray-800">Dra. Camila Alves</p>
+                                    <p class="text-secondary">Dra. Camila Alves</p>
                                     <p class="text-sm text-gray-500">14:00 - 20:00</p>
                                 </div>
                             </li>
                             <li class="flex items-center">
                                 <span class="w-2 h-2 rounded-full bg-red-500 mr-2"></span>
                                 <div>
-                                    <p class="text-gray-800">Dr. Paulo Ribeiro</p>
+                                    <p class="text-secondary">Dr. Paulo Ribeiro</p>
                                     <p class="text-sm text-gray-500">20:00 - 08:00</p>
                                 </div>
                             </li>
@@ -264,52 +277,52 @@
                 
                 <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <div class="bg-white rounded-lg shadow-md p-6">
-                        <h3 class="text-lg font-semibold mb-4">Estatísticas de Atendimento - Últimos 7 dias</h3>
+                        <h3 class="text-lg font-semibold mb-4 text-secondary">Estatísticas de Atendimento - Últimos 7 dias</h3>
                         <div class="h-64 flex items-end justify-between px-2">
                             <div class="flex flex-col items-center">
-                                <div class="w-12 bg-blue-500 rounded-t" style="height: 120px;"></div>
+                                <div class="w-12 bg-primary rounded-t" style="height: 120px;"></div>
                                 <span class="text-xs mt-2">Seg</span>
                             </div>
                             <div class="flex flex-col items-center">
-                                <div class="w-12 bg-blue-500 rounded-t" style="height: 150px;"></div>
+                                <div class="w-12 bg-primary rounded-t" style="height: 150px;"></div>
                                 <span class="text-xs mt-2">Ter</span>
                             </div>
                             <div class="flex flex-col items-center">
-                                <div class="w-12 bg-blue-500 rounded-t" style="height: 180px;"></div>
+                                <div class="w-12 bg-primary rounded-t" style="height: 180px;"></div>
                                 <span class="text-xs mt-2">Qua</span>
                             </div>
                             <div class="flex flex-col items-center">
-                                <div class="w-12 bg-blue-500 rounded-t" style="height: 140px;"></div>
+                                <div class="w-12 bg-primary rounded-t" style="height: 140px;"></div>
                                 <span class="text-xs mt-2">Qui</span>
                             </div>
                             <div class="flex flex-col items-center">
-                                <div class="w-12 bg-blue-500 rounded-t" style="height: 160px;"></div>
+                                <div class="w-12 bg-primary rounded-t" style="height: 160px;"></div>
                                 <span class="text-xs mt-2">Sex</span>
                             </div>
                             <div class="flex flex-col items-center">
-                                <div class="w-12 bg-blue-500 rounded-t" style="height: 100px;"></div>
+                                <div class="w-12 bg-primary rounded-t" style="height: 100px;"></div>
                                 <span class="text-xs mt-2">Sáb</span>
                             </div>
                             <div class="flex flex-col items-center">
-                                <div class="w-12 bg-blue-500 rounded-t" style="height: 60px;"></div>
+                                <div class="w-12 bg-primary rounded-t" style="height: 60px;"></div>
                                 <span class="text-xs mt-2">Dom</span>
                             </div>
                         </div>
                     </div>
                     
                     <div class="bg-white rounded-lg shadow-md p-6">
-                        <h3 class="text-lg font-semibold mb-4">Assistente Virtual</h3>
+                        <h3 class="text-lg font-semibold mb-4 text-secondary">Assistente Virtual</h3>
                         <div class="border rounded-lg p-4 h-64 flex flex-col">
                             <div class="flex-1 overflow-y-auto mb-4">
                                 <div class="flex mb-3">
-                                    <div class="bg-blue-100 rounded-lg py-2 px-4 max-w-[80%]">
-                                        <p class="text-sm text-gray-800">Olá! Sou o assistente virtual da SOS Otorrino. Como posso ajudar?</p>
+                                    <div class="bg-red-100 rounded-lg py-2 px-4 max-w-[80%]">
+                                        <p class="text-sm text-secondary">Olá! Sou o assistente virtual da SOS Otorrino. Como posso ajudar?</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="flex">
-                                <input type="text" class="flex-1 border rounded-l-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Digite sua pergunta...">
-                                <button class="bg-blue-600 text-white px-4 py-2 rounded-r-lg hover:bg-blue-700">
+                                <input type="text" class="flex-1 border rounded-l-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Digite sua pergunta...">
+                                <button class="bg-primary text-white px-4 py-2 rounded-r-lg hover:bg-red-700">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                     </svg>
@@ -322,7 +335,7 @@
             
             <!-- Other sections (hidden initially) -->
             <section id="ferramentas" class="section-content hidden">
-                <h2 class="text-2xl font-bold mb-6">Ferramentas</h2>
+                <h2 class="text-2xl font-bold mb-6 text-secondary">Ferramentas</h2>
                 <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
                     <div class="flex">
                         <div class="flex-shrink-0">
@@ -340,21 +353,21 @@
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div class="bg-white rounded-lg shadow-md p-6">
-                        <h3 class="text-lg font-semibold mb-3">Gerenciador de Senhas</h3>
+                        <h3 class="text-lg font-semibold mb-3 text-secondary">Gerenciador de Senhas</h3>
                         <p class="text-gray-600 mb-4">Acesse e gerencie senhas corporativas de forma segura.</p>
-                        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full">Acessar</button>
+                        <button class="bg-primary text-white px-4 py-2 rounded hover:bg-red-700 w-full">Acessar</button>
                     </div>
                     
                     <div class="bg-white rounded-lg shadow-md p-6">
-                        <h3 class="text-lg font-semibold mb-3">Validador de Guia TISS</h3>
+                        <h3 class="text-lg font-semibold mb-3 text-secondary">Validador de Guia TISS</h3>
                         <p class="text-gray-600 mb-4">Ferramenta para validação e correção de guias TISS.</p>
-                        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full">Acessar</button>
+                        <button class="bg-primary text-white px-4 py-2 rounded hover:bg-red-700 w-full">Acessar</button>
                     </div>
                     
                     <div class="bg-white rounded-lg shadow-md p-6">
-                        <h3 class="text-lg font-semibold mb-3">Confirmação de Agenda</h3>
+                        <h3 class="text-lg font-semibold mb-3 text-secondary">Confirmação de Agenda</h3>
                         <p class="text-gray-600 mb-4">Sistema para confirmação automática de consultas.</p>
-                        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full">Acessar</button>
+                        <button class="bg-primary text-white px-4 py-2 rounded hover:bg-red-700 w-full">Acessar</button>
                     </div>
                 </div>
             </section>
@@ -1578,7 +1591,7 @@
         </main>
     </div>
 
-    <script>
+<script>
         // Login simulation
         document.getElementById('loginForm').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -1605,12 +1618,12 @@
             // Validate credentials
             if (cleanUsername === validUsername && password === validPassword) {
                 message.textContent = 'Entrando...';
-                message.className = 'text-center text-sm text-blue-600';
+                message.className = 'text-center text-sm text-primary';
                 message.classList.remove('hidden');
                 
                 setTimeout(function() {
                     document.getElementById('dashboard').classList.remove('hidden');
-                    document.body.classList.remove('bg-gradient-to-br', 'from-blue-50', 'to-blue-100');
+                    document.body.classList.remove('bg-gradient-to-br', 'from-gray-100', 'to-gray-200');
                     document.body.classList.add('bg-white');
                 }, 1000);
             } else {
@@ -1624,7 +1637,7 @@
         document.getElementById('logoutButton').addEventListener('click', function(e) {
             e.preventDefault();
             document.getElementById('dashboard').classList.add('hidden');
-            document.body.classList.add('bg-gradient-to-br', 'from-blue-50', 'to-blue-100');
+            document.body.classList.add('bg-gradient-to-br', 'from-gray-100', 'to-gray-200');
             document.body.classList.remove('bg-white');
             document.getElementById('loginForm').reset();
             document.getElementById('loginMessage').classList.add('hidden');
@@ -1661,11 +1674,11 @@
                 
                 // Update active nav item
                 document.querySelectorAll('[data-section]').forEach(navLink => {
-                    navLink.classList.remove('bg-blue-600');
+                    navLink.classList.remove('bg-primary');
                     navLink.classList.add('hover:bg-gray-700');
                 });
                 
-                this.classList.add('bg-blue-600');
+                this.classList.add('bg-primary');
                 this.classList.remove('hover:bg-gray-700');
             });
         });

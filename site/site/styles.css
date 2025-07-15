@@ -1,0 +1,11 @@
+.site-logo {
+  height: 400px; /* Ajuste conforme necessário */
+  width: auto; /* Mantém a proporção */
+  max-width: 100%; /* Garante que não ultrapasse o container */
+}
+
+/* Se precisar substituir um elemento existente que usava texto */
+.logo-link {
+  display: inline-block;
+  font-size: 0; /* Esconde texto alternativo se necessário */
+}
